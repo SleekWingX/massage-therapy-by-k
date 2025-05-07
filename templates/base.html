@@ -9,9 +9,7 @@
     <nav>
         <a href="/">Home</a> |
         <a href="/about">About</a> |
-        <a href="/services">Services</a> |
-        <a href="/booking">Booking</a> |
-        <a href="/contact">Contact</a>
+        <a href="/services">Services</a>
     </nav>
 
     <main>
@@ -22,18 +20,26 @@
     <button id="bookBtn">Book Now</button>
     
     <!-- Modal (Hidden by Default) -->
-    <div id="bookingModal" class="modal">
+    <div id="sessionModal" class="modal">
         <div class="modal-content">
-            <span id="closeBtn">&times;</span>
-            <iframe
-                src="https://calendar.google.com/calendar/appointments/schedules/INSERT_YOURS_HERE"
-                width="100%"
-                height="600"
-                frameborder="0"
-            ></iframe>
+          <span id="closeSessionModal">&times;</span>
+          <h2>Select Session Length</h2>
+          <div class="session-options">
+            <button class="session-btn" data-link="https://calendly.com/d/cnwm-7w3-yy9/60-minute-session">60 Minutes</button>
+            <button class="session-btn" data-link="https://calendly.com/massageschedulerexample/90-minute-session">90 Minutes</button>
+            <button class="session-btn" data-link="https://calendly.com/massageschedulerexample/120-minute-session">120 Minutes</button>
+          </div>
+        </div>
+      </div>
+
+    <!-- Embedded Scheduler Modal -->
+    <div id="calendlyModal" class="modal">
+        <div class="modal-content">
+            <span id="closeCalendlyModal">&times;</span>
+            <iframe id="calendlyFrame" src="" width="100%" height="600" frameborder="0"></iframe>
         </div>
     </div>
-    
+
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
