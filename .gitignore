@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Flask and Python logs
+*.log
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python dependency files
+pip-wheel-metadata/
+
+# Database (if using SQLite later)
+*.sqlite3
+*.db
+
+# Build / dist folders
+dist/
+build/
