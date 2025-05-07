@@ -17,5 +17,23 @@
     <main>
         {% block content %}{% endblock %}
     </main>
+
+    <!-- Floating Book Now Button -->
+    <button id="bookBtn">Book Now</button>
+    
+    <!-- Modal (Hidden by Default) -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn">&times;</span>
+            <iframe
+                src="https://calendar.google.com/calendar/appointments/schedules/INSERT_YOURS_HERE"
+                width="100%"
+                height="600"
+                frameborder="0"
+            ></iframe>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
