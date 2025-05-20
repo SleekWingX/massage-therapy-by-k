@@ -1,42 +1,62 @@
+/* General Styles */
 body {
-    font-family: sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f2f7f5;
+    color: #333;
     margin: 0;
     padding: 0;
 }
 
+/* Navigation Bar */
 nav {
-    background-color: #b2dfdb;
+    background-color: #d0ece7;
     padding: 1em;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
     color: #004d40;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #00796b;
+}
+
+/* Main Content */
 main {
     padding: 2em;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Floating Book Now Button */
+/* Floating Book Button */
 #bookBtn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #26a69a;
-    color: white;
+    background-color: #a3d9b1;
+    color: #004d40;
     border: none;
-    padding: 15px 20px;
-    border-radius: 30px;
+    padding: 15px 25px;
+    border-radius: 50px;
     font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    transition: background-color 0.3s ease;
 }
 
-/* Modal Styles */
+#bookBtn:hover {
+    background-color: #89c9a3;
+}
+
+/* Modal Styling */
 .modal {
     display: none;
     position: fixed;
@@ -46,70 +66,41 @@ main {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     animation: fadeIn 0.3s ease-in-out;
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #ffffff;
     margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
+    padding: 30px;
+    border-radius: 12px;
     width: 90%;
-    max-width: 800px;
-    border-radius: 10px;
+    max-width: 700px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     animation: slideUp 0.3s ease-in-out;
 }
 
-#calendlyFrame {
-    border: none;
-    width: 100%;
-    height: 600px;
-}
-
-.session-options {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0;
-    text-align: center;
-  }
-  
-.session-btn {
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    }
-
-.session-btn:hover {
-    background-color: #45a049;
-}
-  
-
-/* Fade and Slide Animations */
+/* Animations */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
 }
 
 @keyframes slideUp {
-    from {transform: translateY(30px); opacity: 0;}
+    from {transform: translateY(40px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
 }
 
+/* Modal Close Button */
 #closeBtn {
-    color: #aaa;
     float: right;
     font-size: 28px;
-    padding: 10px;
+    font-weight: bold;
+    color: #aaa;
     cursor: pointer;
 }
 
 #closeBtn:hover {
-    color: black;
+    color: #333;
 }
