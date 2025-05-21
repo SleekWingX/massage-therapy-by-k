@@ -1,71 +1,64 @@
 # 🌿 Massage Therapy Website
 
-A calming and modern website built with Flask for a massage therapy practice. Features include service listings, therapist info, and a floating booking button integrated with Google Calendar.
+A calming and modern **static website** built with HTML, CSS, and JavaScript for a massage therapy practice. It features service listings, therapist information, and a floating “Book Now” button integrated with Square Appointments for seamless online booking.
 
 ---
 
 ## 🔧 Tech Stack
 
-- **Python (Flask)** – Backend and routing
-- **HTML/CSS** – Templating and styling
-- **JavaScript** – Booking modal behavior
-- **Google Calendar** – Appointment scheduling (via embed)
+- **HTML/CSS** – Markup and styling
+- **JavaScript** – Interactive modal for booking
+- **Square Appointments** – Embedded booking widget
+- **Netlify** – Hosting and deployment
 
 ---
 
 ## 📁 Project Structure
-massage_site/
-├── app.py
-├── requirements.txt
+
+massage-site/
+├── index.html
+├── about.html
+├── services.html
 ├── static/
 │ ├── css/
+│ │ └── styles.css
+│ ├── js/
+│ │ └── main.js
 │ └── images/
-├── templates/
-│ ├── base.html
-│ ├── home.html
-│ ├── about.html
-│ ├── services.html
-│ ├── booking.html
-│ └── contact.html
-└── .gitignore
+├── .gitignore
+└── README.md
+
 
 ---
 
 ## 🚀 Running Locally
 
-1. Clone the repo:
+You can test the site with **Live Server** (VS Code extension):
 
-git clone https://github.com/yourusername/massage-site.git
-cd massage-site
-
-
-2. Create a virtual environment and install dependencies:
-
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-
-
-3. Run the Flask app:
-
-python app.py
-
-
-4. Open your browser:
-
-http://127.0.0.1:5000/
-
+1. Right-click `index.html` and choose **“Open with Live Server”**.
+2. Your browser will open to `http://127.0.0.1:5500` (or similar).
 
 ---
 
 ## 📅 Booking Integration
 
-The floating “Book Now” button on the site opens a scheduler connected to a Google Calendar, allowing visitors to book available time slots.
+Clicking the **“Book Now”** button opens a modal that embeds the **Square Appointments** scheduler, allowing clients to book sessions without leaving the site.
+
+---
+
+## ✅ Deployment (Netlify)
+
+1. Push your code to GitHub.
+2. Go to [https://netlify.com](https://netlify.com) and create an account.
+3. Click **“Add New Site” → “Import from GitHub”**.
+4. Select your repo and click **Deploy**.
+5. Netlify will host it on a free `.netlify.app` domain.
 
 ---
 
 ## ✨ Future Features
 
-- Contact form with email notifications
-- Admin dashboard to manage appointments
-- SEO and performance optimization
+- Contact form with Netlify Forms or Formspree
+- Analytics integration
+- SEO improvements
+- Social media links
