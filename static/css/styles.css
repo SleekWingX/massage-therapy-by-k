@@ -30,26 +30,25 @@ nav a:hover {
 /* Main Content */
 main {
     padding: 2em;
-    max-width: 1000px;
+    text-align: center;
+    max-width: 800px;
     margin: 0 auto;
 }
-
 /* Floating Book Button */
 #bookBtn {
     position: fixed;
     bottom: 20px;
-    right: 20px;
-    background-color: #a3d9b1;
-    color: #004d40;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #26a69a;
+    color: white;
     border: none;
-    padding: 15px 25px;
-    border-radius: 50px;
+    padding: 15px 20px;
+    border-radius: 30px;
     font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
 #bookBtn:hover {
@@ -103,4 +102,28 @@ main {
 
 #closeBtn:hover {
     color: #333;
+}
+
+/* Mobile friendly styles */
+@media screen and (max-width: 600px) {
+    nav {
+        font-size: 0.9em;
+        padding: 0.5em;
+    }
+
+    nav a {
+        display: block;
+        margin: 0.5em 0;
+    }
+
+    #bookBtn {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1em;
+    }
 }
