@@ -2,6 +2,7 @@ const bookBtn = document.getElementById("bookBtn");
 const bookingModal = document.getElementById("booking-modal");
 const closeBtn = document.getElementById("closeBtn");
 const squareWidgetContainer = document.getElementById("square-widget-container");
+const themeToggle = document.getElementById("themeToggle");
 
 let widgetLoaded = false;
 
@@ -24,4 +25,16 @@ window.addEventListener("click", (event) => {
   if (event.target == bookingModal) {
     bookingModal.style.display = "none";
   }
+});
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 });

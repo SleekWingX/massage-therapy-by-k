@@ -127,3 +127,51 @@ main {
         padding: 1em;
     }
 }
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #00796b;
+}
+
+/* Dark Theme Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode nav {
+    background-color: #263238;
+}
+
+body.dark-mode nav a {
+    color: #80cbc4;
+}
+
+body.dark-mode .modal-content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode #bookBtn {
+    background-color: #4db6ac;
+}
+
+body.dark-mode .theme-toggle {
+    background-color: #4db6ac;
+}
